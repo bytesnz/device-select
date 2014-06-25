@@ -80,7 +80,7 @@ if (!class_exists('DeviceSelect')) {
 
 			foreach(array('desktop', 'touch', 'mobile') as $l) {
 				if (!empty($instance[$l . '_label'])) {
-					$links[] = '<a onclick="device_select.change(\'' . $instance[$l . '_class'] . '\')">' . __($instance[$l . '_label'], 'device_select') . '</a>';
+					$links[] = '<a class="' . $instance[$l . '_class'] . '" onclick="device_select.change(\'' . $instance[$l . '_class'] . '\')">' . __($instance[$l . '_label'], 'device_select') . '</a>';
 				}
 			}
 
