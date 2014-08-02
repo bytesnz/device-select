@@ -207,31 +207,7 @@ device_select = {
 };
 ";
 
-/*
-function uhcr_sub_menu(el) {
-	if(el=el.parentNode) {
-		if(jQuery('body').hasClass('touch')||jQuery('body').hasClass('mobile')) {
-			if(jQuery(el).hasClass('expand')) {
-				jQuery(el).removeClass('expand');
-			} else {
-				var pe=el.parentNode;
-				var i;
-				var ch=pe.childNodes;
-
-				for(i=0;i<ch.length;i++) {
-					if(jQuery(ch.item(i)).hasClass('expand')) {
-						jQuery(ch.item(i)).removeClass('expand');
-					}
-				}
-				jQuery(el).addClass('expand');
-			}
-			return false;
-		}
-	}
-	return true;
 }
-*/
-		}
 
 		function send_cookie() {
 			if (is_active_widget(false, false, $this->id_base, true)) {
@@ -258,7 +234,7 @@ function uhcr_sub_menu(el) {
 		function get_device_class() {
 			$settings = $this->_getSettings();
 
-			require_once('lib/Mobile_Detect.php');
+			require_once('lib/Mobile-Detect/Mobile_Detect.php');
 			if (class_exists(Mobile_Detect)) {
 				$detect = new Mobile_Detect;
 				/* Determine what type of browser we have */
